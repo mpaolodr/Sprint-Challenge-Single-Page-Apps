@@ -1,14 +1,15 @@
 import React from "react";
+import { List } from "./Styles.js";
 
 //components
 import CharacterCard from "./CharacterCard.js";
 
 export default function CharacterList({ data }) {
   return (
-    <section className="character-list">
+    <List>
       {data.map(char => {
         return <CharacterCard char={char} />;
       })}
-    </section>
+    </List>
   );
 }

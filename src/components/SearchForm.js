@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
+import { SearchCont, LabelCont } from "./Styles.js";
+
+//icon
+import SearchIcon from "@material-ui/icons/Search";
 
 export default function SearchForm({ search, query }) {
   return (
-    <section className="search-form">
+    <SearchCont>
       <form>
-        <label>
-          Put icon here
+        <LabelCont>
+          <SearchIcon />
           <input
             type="text"
             name="search"
@@ -13,8 +17,8 @@ export default function SearchForm({ search, query }) {
             placeholder="search"
             onChange={search}
           />
-        </label>
+        </LabelCont>
       </form>
-    </section>
+    </SearchCont>
   );
 }

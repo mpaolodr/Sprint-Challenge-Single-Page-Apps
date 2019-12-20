@@ -1,11 +1,12 @@
 import React from "react";
+import { Card, Text } from "./Styles";
 
 export default function LocationCard({ loc }) {
   return (
-    <div className="card">
-      <h2>Name: {loc.name}</h2>
-      <h2>Type: {loc.type}</h2>
-      <h2>Dimension: {loc.dimension}</h2>
-    </div>
+    <Card>
+      <Text>Name: {loc.name}</Text>
+      <Text>Type: {loc.type}</Text>
+      <Text>Dimension: {loc.dimension}</Text>
+    </Card>
   );
 }

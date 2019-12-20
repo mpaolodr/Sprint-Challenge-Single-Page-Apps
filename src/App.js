@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import axios from "axios";
+import { AppContainer } from "./components/Styles.js";
 
 //components
 import WelcomePage from "./components/WelcomePage.js";
@@ -54,22 +55,24 @@ export default function App() {
   };
 
   return (
-    <main>
+    <AppContainer>
       <Header search={search} changeCategory={changeCategory} query={query} />
-      <Switch>
-        <Route path="/char">
-          <CharacterList data={data} />
-        </Route>
-        <Route path="/loc">
-          <LocationList data={data} />
-        </Route>
-        <Route path="/ep">
-          <EpisodeList data={data} />
-        </Route>
-        <Route path="/">
-          <WelcomePage />
-        </Route>
-      </Switch>
-    </main>
+      <div className="page">
+        <Switch>
+          <Route path="/char">
+            <CharacterList data={data} />
+          </Route>
+          <Route path="/loc">
+            <LocationList data={data} />
+          </Route>
+          <Route path="/ep">
+            <EpisodeList data={data} />
+          </Route>
+          <Route path="/">
+            <WelcomePage />
+          </Route>
+        </Switch>
+      </div>
+    </AppContainer>
   );
 }
