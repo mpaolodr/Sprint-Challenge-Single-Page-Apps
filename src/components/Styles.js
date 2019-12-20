@@ -84,3 +84,9 @@ export const Page = styled.div`
   width: 80%;
   margin: 0 auto;
 `;
+
+export const Gif = styled.div`
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+`;
