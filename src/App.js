@@ -26,6 +26,7 @@ export default function App() {
       .get(`https://rickandmortyapi.com/api/${category}/?page=${page}`)
       .then(res => {
         console.log(res.data.results);
+
         const rawData = res.data.results;
         if (category === "character") {
           const filteredChar = rawData.filter(char =>
