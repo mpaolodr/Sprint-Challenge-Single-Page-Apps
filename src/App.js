@@ -84,41 +84,93 @@ export default function App() {
           </Route>
           <Route exact path="/char">
             <CharacterList data={data} />
+            <NavigateBeforeIcon
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "20px",
+                border: "2px solid white",
+                color: "white",
+                height: "50px",
+                width: "20px",
+                cursor: "pointer"
+              }}
+              onClick={prevBtn}
+            />
+            <NavigateNextIcon
+              style={{
+                position: "absolute",
+                top: "50%",
+                right: "20px",
+                border: "2px solid white",
+                color: "white",
+                height: "50px",
+                width: "20px",
+                cursor: "pointer"
+              }}
+              onClick={nxtBtn}
+            />
           </Route>
           <Route exact path="/loc">
             <LocationList data={data} />
+            <NavigateBeforeIcon
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "20px",
+                border: "2px solid white",
+                color: "white",
+                height: "50px",
+                width: "20px",
+                cursor: "pointer"
+              }}
+              onClick={prevBtn}
+            />
+            <NavigateNextIcon
+              style={{
+                position: "absolute",
+                top: "50%",
+                right: "20px",
+                border: "2px solid white",
+                color: "white",
+                height: "50px",
+                width: "20px",
+                cursor: "pointer"
+              }}
+              onClick={nxtBtn}
+            />
           </Route>
           <Route exact path="/ep">
             <EpisodeList data={data} />
+            <NavigateBeforeIcon
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "20px",
+                border: "2px solid white",
+                color: "white",
+                height: "50px",
+                width: "20px",
+                cursor: "pointer"
+              }}
+              onClick={prevBtn}
+            />
+            <NavigateNextIcon
+              style={{
+                position: "absolute",
+                top: "50%",
+                right: "20px",
+                border: "2px solid white",
+                color: "white",
+                height: "50px",
+                width: "20px",
+                cursor: "pointer"
+              }}
+              onClick={nxtBtn}
+            />
           </Route>
         </Switch>
       </Page>
-      <NavigateBeforeIcon
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "20px",
-          border: "2px solid white",
-          color: "white",
-          height: "50px",
-          width: "20px",
-          cursor: "pointer"
-        }}
-        onClick={prevBtn}
-      />
-      <NavigateNextIcon
-        style={{
-          position: "absolute",
-          top: "50%",
-          right: "20px",
-          border: "2px solid white",
-          color: "white",
-          height: "50px",
-          width: "20px",
-          cursor: "pointer"
-        }}
-        onClick={nxtBtn}
-      />
     </AppContainer>
   );
 }
