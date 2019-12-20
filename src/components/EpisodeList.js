@@ -1,7 +1,7 @@
 import React from "react";
 
 //components
-import EpisodeCard from "./EpisodeCard";
+import EpisodeCard from "./EpisodeCard.js";
 
 export default function EpisodeList({ data }) {
   return (

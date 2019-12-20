@@ -1,7 +1,7 @@
 import React from "react";
 
 //component
-import LocationCard from "./LocationCard";
+import LocationCard from "./LocationCard.js";
 
 export default function LocationsList({ data }) {
   return (

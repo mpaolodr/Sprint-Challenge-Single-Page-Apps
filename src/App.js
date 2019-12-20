@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 
 //components
+import WelcomePage from "./components/WelcomePage.js";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList.js";
 import LocationList from "./components/LocationsList.js";
@@ -64,6 +65,9 @@ export default function App() {
         </Route>
         <Route path="/ep">
           <EpisodeList data={data} />
+        </Route>
+        <Route path="/">
+          <WelcomePage />
         </Route>
       </Switch>
     </main>

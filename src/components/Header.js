@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 //import component
-import SearchForm from "./SearchForm";
+import SearchForm from "./SearchForm.js";
 
 export default function Header({ search, changeCategory, query }) {
   return (

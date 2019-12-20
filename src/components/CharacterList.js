@@ -1,7 +1,7 @@
 import React from "react";
 
 //components
-import CharacterCard from "./CharacterCard";
+import CharacterCard from "./CharacterCard.js";
 
 export default function CharacterList({ data }) {
   return (
