@@ -6,12 +6,13 @@ import axios from "axios";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList.js";
 import LocationList from "./components/LocationsList.js";
+import EpisodeList from "./components/EpisodeList.js";
 
 export default function App() {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1); //for buttons to change pages
-  const [category, setCategory] = useState("character"); // for setting the category
+  const [category, setCategory] = useState(""); // for setting the category
 
   //Fetch data from api
   useEffect(() => {
@@ -60,6 +61,9 @@ export default function App() {
         </Route>
         <Route path="/loc">
           <LocationList data={data} />
+        </Route>
+        <Route path="/ep">
+          <EpisodeList data={data} />
         </Route>
       </Switch>
     </main>
