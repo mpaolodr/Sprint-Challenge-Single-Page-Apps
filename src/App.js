@@ -79,17 +79,17 @@ export default function App() {
       <Header search={search} changeCategory={changeCategory} query={query} />
       <Page>
         <Switch>
-          <Route path="/char">
+          <Route exact path="/">
+            <WelcomePage />
+          </Route>
+          <Route exact path="/char">
             <CharacterList data={data} />
           </Route>
-          <Route path="/loc">
+          <Route exact path="/loc">
             <LocationList data={data} />
           </Route>
-          <Route path="/ep">
+          <Route exact path="/ep">
             <EpisodeList data={data} />
-          </Route>
-          <Route path="/">
-            <WelcomePage />
           </Route>
         </Switch>
       </Page>

@@ -5,7 +5,7 @@ import bg from "../bg.svg";
 
 export const AppContainer = styled.main`
   width: 100%;
-  height: auto;
+
   padding: 0;
   margin: 0;
   max-width: 100%;
@@ -45,6 +45,7 @@ export const List = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
   flex-wrap: wrap;
   padding: 10px;
 `;
