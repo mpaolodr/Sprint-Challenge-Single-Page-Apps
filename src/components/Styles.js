@@ -6,12 +6,14 @@ import bg from "../bg.svg";
 export const AppContainer = styled.main`
   width: 100%;
   height: auto;
+  padding: 0;
   margin: 0;
   max-width: 100%;
   min-width: auto;
   min-height: 100vh;
   background: url(${bg}) no-repeat center;
   backgorund-size: cover;
+  position: relative;
 `;
 
 export const HeaderCont = styled.header`
@@ -71,4 +73,14 @@ export const Text = styled.h2`
   font-size: 1.2rem;
   color: white;
   text-align: center;
+`;
+
+export const Title = styled.h1`
+  font-size: 2rem;
+  color: white;
+`;
+
+export const Page = styled.div`
+  width: 80%;
+  margin: 0 auto;
 `;

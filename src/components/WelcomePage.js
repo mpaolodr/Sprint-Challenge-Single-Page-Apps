@@ -1,11 +1,12 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import { Title } from "./Styles.js";
 
 export default function WelcomePage() {
   return (
     <section className="welcome-page">
       <header>
-        <h1>Welcome to the ultimate fan site!</h1>
+        <Title>Welcome to the ultimate fan site!</Title>
       </header>
     </section>
   );

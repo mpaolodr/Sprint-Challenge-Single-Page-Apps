@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import axios from "axios";
-import { AppContainer } from "./components/Styles.js";
+import { AppContainer, Page } from "./components/Styles.js";
+
+//icons
+import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
+import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 
 //components
 import WelcomePage from "./components/WelcomePage.js";
@@ -54,10 +58,26 @@ export default function App() {
     setCategory(string);
   };
 
+  const prevBtn = () => {
+    if (page === 1) {
+      return;
+    } else {
+      setPage(page - 1);
+    }
+  };
+
+  const nxtBtn = () => {
+    if (page === data.length) {
+      return;
+    } else {
+      setPage(page + 1);
+    }
+  };
+
   return (
     <AppContainer>
       <Header search={search} changeCategory={changeCategory} query={query} />
-      <div className="page">
+      <Page>
         <Switch>
           <Route path="/char">
             <CharacterList data={data} />
@@ -72,7 +92,33 @@ export default function App() {
             <WelcomePage />
           </Route>
         </Switch>
-      </div>
+      </Page>
+      <NavigateBeforeIcon
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "20px",
+          border: "2px solid white",
+          color: "white",
+          height: "50px",
+          width: "20px",
+          cursor: "pointer"
+        }}
+        onClick={prevBtn}
+      />
+      <NavigateNextIcon
+        style={{
+          position: "absolute",
+          top: "50%",
+          right: "20px",
+          border: "2px solid white",
+          color: "white",
+          height: "50px",
+          width: "20px",
+          cursor: "pointer"
+        }}
+        onClick={nxtBtn}
+      />
     </AppContainer>
   );
 }
