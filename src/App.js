@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 
 //components
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList.js";
+import LocationList from "./components/LocationsList.js";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -52,7 +54,14 @@ export default function App() {
   return (
     <main>
       <Header search={search} changeCategory={changeCategory} query={query} />
-      <CharacterList data={data} />
+      <Switch>
+        <Route path="/char">
+          <CharacterList data={data} />
+        </Route>
+        <Route path="/loc">
+          <LocationList data={data} />
+        </Route>
+      </Switch>
     </main>
   );
 }

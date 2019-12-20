@@ -1,3 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-export default function LocationsList() {}
+//component
+import LocationCard from "./LocationCard";
+
+export default function LocationsList({ data }) {
+  return (
+    <section className="location-list">
+      {data.map(loc => {
+        return <LocationCard loc={loc} />;
+      })}
+    </section>
+  );
+}
