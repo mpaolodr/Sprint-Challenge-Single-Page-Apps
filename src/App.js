@@ -3,6 +3,7 @@ import axios from "axios";
 
 //components
 import Header from "./components/Header.js";
+import CharacterList from "./components/CharacterList.js";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -51,6 +52,7 @@ export default function App() {
   return (
     <main>
       <Header search={search} changeCategory={changeCategory} query={query} />
+      <CharacterList data={data} />
     </main>
   );
 }

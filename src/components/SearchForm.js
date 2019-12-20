@@ -11,7 +11,7 @@ export default function SearchForm({ search, query }) {
             name="search"
             value={query}
             placeholder="search"
-            onChange={e => search(e.target.value)}
+            onChange={search}
           />
         </label>
       </form>
