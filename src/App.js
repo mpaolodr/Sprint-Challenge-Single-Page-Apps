@@ -40,13 +40,17 @@ export default function App() {
   }, [query, page, category]);
 
   //handle change in search form
-  const handler = e => {
+  const search = e => {
     setQuery(e.target.value);
+  };
+
+  const changeCategory = string => {
+    setCategory(string);
   };
 
   return (
     <main>
-      <Header />
+      <Header search={search} changeCategory={changeCategory} query={query} />
     </main>
   );
 }
