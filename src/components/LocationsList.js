@@ -1,3 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { List } from "./Styles.js";
 
-export default function LocationsList() {}
+//component
+import LocationCard from "./LocationCard.js";
+
+export default function LocationsList({ data }) {
+  return (
+    <List>
+      {data.map(loc => {
+        return <LocationCard loc={loc} />;
+      })}
+    </List>
+  );
+}

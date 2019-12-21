@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
+import { SearchCont, LabelCont } from "./Styles.js";
 
-export default function SearchForm() {
- 
+//icon
+import SearchIcon from "@material-ui/icons/Search";
+
+export default function SearchForm({ search, query }) {
   return (
-    <section className="search-form">
-     // Add a search form here
-    </section>
+    <SearchCont>
+      <form>
+        <LabelCont>
+          <SearchIcon />
+          <input
+            type="text"
+            name="search"
+            value={query}
+            placeholder="search"
+            onChange={search}
+          />
+        </LabelCont>
+      </form>
+    </SearchCont>
   );
 }
